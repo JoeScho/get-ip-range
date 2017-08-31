@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+  - 8
+branches:
+only:
+  - master
+notifications:
+email:
+  - joeschofield@live.co.uk
+script: npm test

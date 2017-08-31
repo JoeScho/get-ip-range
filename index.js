@@ -4,10 +4,13 @@ const ip = require('ip');
 
 module.exports = convert;
 
-function convert (cidrIp) {
+function convert(cidrIp) {
   const ips = [];
 
-  if (typeof cidrIp !== 'string' || !ip.isV4Format(cidrIp.split('/')[0]) || !cidrIp.split('/')[1] || cidrIp.split('/')[1] > 255)
+  if (typeof cidrIp !== 'string' ||
+    !ip.isV4Format(cidrIp.split('/')[0]) ||
+    !cidrIp.split('/')[1] ||
+    cidrIp.split('/')[1] > 255)
     return 'IP supplied is not valid';
 
   const subnet = ip.cidrSubnet(cidrIp);

@@ -33,7 +33,7 @@ describe('convertCIDRToIPRange', function () {
         '192.168.1.131',
         '192.168.1.132',
         '192.168.1.133',
-        '192.168.1.134'
+        '192.168.1.134',
       ];
 
       expect(iPConverter('192.168.1.134/29')).to.deep.equal(expectedResponse);
