@@ -4,9 +4,7 @@ const ip = require('ip');
 
 module.exports = convert;
 
-convert('192.168.1.134');
-
-function convert (cidrIp) {debugger
+function convert (cidrIp) {
   const ips = [];
 
   if (typeof cidrIp !== 'string' || !ip.isV4Format(cidrIp.split('/')[0]) || !cidrIp.split('/')[1] || cidrIp.split('/')[1] > 255)
