@@ -1,6 +1,6 @@
 {
   "name": "get-ip-range",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple utility to convert CIDR notation to an array of IP addresses",
   "main": "index.js",
   "directories": {
