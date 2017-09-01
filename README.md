@@ -1,5 +1,8 @@
-# get-ip-range
+# get-ip-range  
 
+Simple utility to convert either CIDR notation or two IP addresses to an array of the range of IP addresses
+
+----
 
 <a href="https://nodei.co/npm/get-ip-range/"><img src="https://nodei.co/npm/get-ip-range.png?downloads=true"></a>
 
