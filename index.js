@@ -3,7 +3,7 @@
 const ip = require('ip');
 const cidrv4 = require('cidr-regex').cidrv4;
 
-const errorMessage = 'IP supplied is not valid';
+const errorMessage = new Error('IP supplied is not valid');
 
 module.exports = convert;
 
@@ -15,14 +15,14 @@ function convert(cidrIp, ip2) {
     if (ip.isV4Format(cidrIp) && ip.isV4Format(ip2))
       return getRange(cidrIp, ip2);
 
-    return errorMessage;
+    return buildResponse(errorMessage);
   }
 
   /*
   Ensure IP is valid and in CIDR format
   */
   if (!cidrv4.test(cidrIp))
-    return errorMessage;
+    return buildResponse(errorMessage);
 
   const subnet = ip.cidrSubnet(cidrIp);
   const firstAddress = subnet.firstAddress;
@@ -40,5 +40,12 @@ function getRange(ip1, ip2) {
   for (firstAddressLong; firstAddressLong <= lastAddressLong; firstAddressLong++)
     ips.push(ip.fromLong(firstAddressLong));
 
-  return ips;
+  return buildResponse(null, ips);
+}
+
+function buildResponse(err, value) {
+  return {
+    error: err,
+    value: value,
+  };
 }

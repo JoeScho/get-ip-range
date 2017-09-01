@@ -7,13 +7,18 @@
     "test": "test"
   },
   "scripts": {
-    "test": "NODE_PATH=. nyc --reporter=html --reporter=text mocha --recursive",
-    "jshint": "jshint *.js test/*.js",
-    "code-style": "jscs -p airbnb --fix *.js test/*.js",
+    "test": "nyc --reporter=html --reporter=text mocha *.test.js",
+    "jshint": "jshint *.js *.test.js",
+    "code-style": "jscs -p airbnb --fix *.js *.test.js",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "check-coverage": "nyc check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
     "open-coverage": "open coverage/index.html"
   },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
   "keywords": [
     "CIDR",
     "IP"
@@ -46,12 +51,7 @@
     "onecase": true,
     "indent": 2,
     "sub": true,
-    "esversion": 8,
-    "predef": [
-      "it",
-      "describe",
-      "before"
-    ]
+    "esversion": 8
   },
   "dependencies": {
     "cidr-regex": "^1.0.6",
