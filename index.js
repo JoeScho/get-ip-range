@@ -7,6 +7,9 @@ const errorMessage = 'IP supplied is not valid';
 module.exports = convert;
 
 function convert(cidrIp, ip2) {
+  /*
+  If second IP address is supplied, ensure that both are IPv4 format
+  */
   if (ip2) {
     if (ip.isV4Format(cidrIp) && ip.isV4Format(ip2)) {
       return getRange(cidrIp, ip2);
@@ -15,6 +18,9 @@ function convert(cidrIp, ip2) {
     return errorMessage;
   }
 
+  /*
+  Ensure IP is valid and in CIDR format
+  */
   if (typeof cidrIp !== 'string' ||
     !ip.isV4Format(cidrIp.split('/')[0]) ||
     !cidrIp.split('/')[1] ||
