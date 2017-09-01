@@ -17,7 +17,11 @@
 const getIPRange = require('get-ip-range');
 
 getIPRange('192.168.1.134/29');
-// Returns an array of 6 IP addresses
+// Returns an object: 
+{
+  error: null,
+  value: array of 6 IP addresses
+}
 ```
 
 **For two IP addresses**:
@@ -26,5 +30,13 @@ getIPRange('192.168.1.134/29');
 const getIPRange = require('get-ip-range');
 
 getIPRange('192.168.1.129', '192.168.1.134');
-// Returns an array of 6 IP addresses
+// Returns an object: 
+{
+  error: null,
+  value: array of 6 IP addresses
+}
 ```
+
+**Error scenario**  
+
+If the supplied IP address(es) are invalid, the response.error value will be an [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
