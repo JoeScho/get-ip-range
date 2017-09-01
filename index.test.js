@@ -24,6 +24,14 @@ describe('convert', function () {
         expect(iPConverter().error).to.be.an('error');
       });
 
+      it('should return an error if the value is supplied is null', function () {
+        expect(iPConverter(null).error).to.be.an('error');
+      });
+
+      it('should return an error if the value is supplied is undefined', function () {
+        expect(iPConverter(undefined).error).to.be.an('error');
+      });
+
       it('should return an error if the IP address supplied is invalid', function () {
         expect(iPConverter('abc').error).to.be.an('error');
         expect(iPConverter(123).error).to.be.an('error');
@@ -57,6 +65,16 @@ describe('convert', function () {
       it('should return an error if one of the IP addresses is in CIDR notation', function () {
         expect(iPConverter('10.1.128.0/29', '10.1.128.0').error).to.be.an('error');
         expect(iPConverter('10.1.128.0', '10.1.128.0/29').error).to.be.an('error');
+      });
+
+      it('should return an error if one of the IP addresses is in null', function () {
+        expect(iPConverter(null, '10.1.128.0').error).to.be.an('error');
+        expect(iPConverter('10.1.128.0', null).error).to.be.an('error');
+      });
+
+      it('should return an error if one of the IP addresses is in undefined', function () {
+        expect(iPConverter(undefined, '10.1.128.0').error).to.be.an('error');
+        expect(iPConverter('10.1.128.0', undefined).error).to.be.an('error');
       });
 
       it('should return an error if one IP address has numbers which are too high', function () {
