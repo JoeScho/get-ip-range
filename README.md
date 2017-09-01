@@ -1,4 +1,4 @@
-# getIPRange
+# get-ip-range
 
 
 <a href="https://nodei.co/npm/get-ip-range/"><img src="https://nodei.co/npm/get-ip-range.png?downloads=true"></a>
