@@ -26,12 +26,12 @@
   "author": "@JoeScho <joeschofield@live.co.uk>",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.1.1",
-    "coveralls": "^2.13.1",
+    "chai": "^4.1.2",
+    "coveralls": "^2.13.3",
     "jscs": "^3.0.7",
     "jshint": "^2.9.5",
-    "mocha": "^3.5.0",
-    "nyc": "^11.1.0"
+    "mocha": "^3.5.3",
+    "nyc": "^11.9.0"
   },
   "pre-commit": [
     "jshint",
@@ -54,7 +54,7 @@
     "esversion": 8
   },
   "dependencies": {
-    "cidr-regex": "^1.0.6",
+    "cidr-regex": "^1.0.7",
     "ip": "^1.1.5"
   }
 }
