@@ -39,7 +39,7 @@
     "jscs": "^3.0.7",
     "jshint": "^2.10.1",
     "mocha": "^5.2.0",
-    "nyc": "^11.9.0"
+    "nyc": "^14.1.1"
   },
   "pre-commit": [
     "jshint",
@@ -63,6 +63,7 @@
   },
   "dependencies": {
     "cidr-regex": "^1.0.7",
-    "ip": "^1.1.5"
+    "ip": "^1.1.5",
+    "ip-address": "^6.1.0"
   }
 }
