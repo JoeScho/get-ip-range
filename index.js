@@ -23,7 +23,6 @@ const getRangev6 = (ip1, ip2) => {
   const lastAddress = new ipAddress.Address6(ip2);
 
   for (let i = firstAddress.bigInteger(); i <= lastAddress.bigInteger(); i++) {
-    debugger
     ips.push(ipAddress.Address6.fromBigInteger(i).correctForm());
   }
 
