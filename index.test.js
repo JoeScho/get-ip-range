@@ -6,12 +6,14 @@ const { expect } = require('chai');
 const ipConverter = require('./index.js');
 
 const successResponsev4 = [
+  '192.168.1.128',
   '192.168.1.129',
   '192.168.1.130',
   '192.168.1.131',
   '192.168.1.132',
   '192.168.1.133',
   '192.168.1.134',
+  '192.168.1.135'
 ];
 
 const successResponsev6 = [
@@ -251,7 +253,7 @@ describe('convert', function () {
 
     describe('success cases', function () {
       it('should return an array of IP addresses within the specified range', function () {
-        expect(ipConverter('192.168.1.129', '192.168.1.134')).to.deep.equal(successResponsev4);
+        expect(ipConverter('192.168.1.128', '192.168.1.135')).to.deep.equal(successResponsev4);
       });
 
       it('should support IPv6', function () {
@@ -259,7 +261,7 @@ describe('convert', function () {
       });
 
       it('should support hyphenated range in IPv4', function () {
-        expect(ipConverter('192.168.1.129-192.168.1.134')).to.deep.equal(successResponsev4);
+        expect(ipConverter('192.168.1.128-192.168.1.135')).to.deep.equal(successResponsev4);
       });
 
       it('should support hyphenated range in IPv5', function () {

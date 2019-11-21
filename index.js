@@ -1,6 +1,6 @@
 const ip = require('ip');
 const ipAddress = require('ip-address')
-const { cidrv4, cidrv6 } = require('cidr-regex');
+const {cidrv4, cidrv6} = require('cidr-regex');
 
 const errorMessage = new Error('IP supplied is not valid');
 
@@ -53,27 +53,33 @@ const convert = (cidrIp, ip2) => {
       return getRangev6(cidrIp, ip2);
     }
   } else {
-    if (ip1v4.valid) {
-      const subnet = ip.cidrSubnet(cidrIp);
 
-      const firstAddress = subnet.firstAddress;
-      const lastAddress = subnet.lastAddress;
+    const [firstAddress, lastAddress] = isRange(cidrIp) ? cidrIp.split('-') : cidrToRange(cidrIp);
 
-      return getRangev4(firstAddress, lastAddress);
-    }
-
-    if (ip1v6.valid) {
-      const IPv6 = new ipAddress.Address6(cidrIp);
-      return getRangev6(IPv6.startAddress().correctForm(), IPv6.endAddress().correctForm());
-    }
-
-    if (isRange(cidrIp)) {
-      const [ firstAddress, lastAddress ] = cidrIp.split('-');
-      return convert(firstAddress, lastAddress);
-    }
+    return convert(firstAddress, lastAddress);
   }
 
   throw err;
 }
+
+const cidrToRange = (cidr) => {
+
+  const ipv4 = new ipAddress.Address4(cidr);
+  const ipv6 = new ipAddress.Address6(cidr);
+
+  let cidrIP;
+  if (!isCIDR(cidr)) {
+    throw Error(`${cidr} is not CIDR`);
+  } else if (ipv4.valid) {
+    cidrIP = ipv4
+  } else if (ipv6.valid) {
+    cidrIP = ipv6
+  } else {
+    throw Error(`${cidr} is not valid ip`)
+  }
+  const firstAddress = cidrIP.startAddress().correctForm();
+  const lastAddress = cidrIP.endAddress().correctForm();
+  return [firstAddress, lastAddress]
+};
 
 module.exports = convert;
