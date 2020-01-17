@@ -73,7 +73,7 @@ const convert = (cidrIp, ip2) => {
     }
   }
 
-  throw err;
+  throw errorMessage;
 }
 
 module.exports = convert;
