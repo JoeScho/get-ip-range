@@ -1,8 +1,5 @@
 const ip = require('ip');
 const ipAddress = require('ip-address')
-const { cidrv4, cidrv6 } = require('cidr-regex');
-
-const errorMessage = new Error('IP supplied is not valid');
 
 const getRangev4 = (ip1, ip2) => {
   const ips = [];
@@ -73,7 +70,7 @@ const convert = (cidrIp, ip2) => {
     }
   }
 
-  throw errorMessage;
+  throw new Error('IP supplied is not valid');
 }
 
 module.exports = convert;
