@@ -22,7 +22,7 @@ $ npm i get-ip-range
 ### IPv4
 * CIDR `"x.x.x.x/x"`
 * Range `"x.x.x.x-x.x.x.x"`
-* Two IPs `"x.x.x.x, x.x.x.x"`
+* Two IPs `"x.x.x.x", "x.x.x.x"`
 
 ### IPv6
 * CIDR `"x:x:x:x:x:x:x:x/x"`
