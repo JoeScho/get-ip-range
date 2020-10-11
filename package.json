@@ -2,14 +2,13 @@
   "name": "get-ip-range",
   "version": "3.0.0",
   "description": "Simple utility to convert either CIDR notation or two IP addresses to an array of the range of IP addresses",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "build": "tsc"
   },
   "files": [
-    "LICENSE",
-    "README.md",
-    "index.js"
+    "index.ts"
   ],
   "keywords": [
     "CIDR",
@@ -29,12 +28,12 @@
     "@types/ip": "^1.1.0",
     "coveralls": "^3.0.2",
     "jest": "^26.5.3",
+    "pre-commit": "^1.2.2",
     "ts-jest": "^26.4.1",
     "typescript": "^4.0.3"
   },
   "pre-commit": [
-    "test",
-    "check-coverage"
+    "test"
   ],
   "dependencies": {
     "ip": "^1.1.5",

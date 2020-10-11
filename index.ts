@@ -1,4 +1,5 @@
 import { toLong, fromLong } from 'ip';
+// @ts-ignore
 import { Address4, Address6 } from 'ip-address';
 
 const getIPv4 = (ip: string): Address4 | null => {
@@ -46,7 +47,7 @@ const isCIDR = (ipCIDR: Address4 | Address6): boolean => Boolean(ipCIDR.parsedSu
 
 const isRange = (ipRange: string): boolean => ipRange.indexOf('-') !== -1;
 
-const getIPRange = (ip1: string, ip2?: string) => {
+const getIPRange = (ip1: string, ip2?: string): Array<string> => {
   const ip1v4 = getIPv4(ip1);
   const ip1v6 = getIPv6(ip1);
 

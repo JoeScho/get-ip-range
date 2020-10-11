@@ -20,16 +20,6 @@ const successResponsev6 = [
 
 describe('convert', () => {
   describe('for cidr notation', () => {
-    it('should return an error if the value is supplied is null', () => {
-      const fn = () => getIPRange(null);
-      expect(fn).toThrow();
-    });
-
-    it('should return an error if the value is supplied is undefined', () => {
-      const fn = () => getIPRange(undefined);
-      expect(fn).toThrow();
-    });
-
     it('should return an error if the IP address supplied is invalid', () => {
       const fn = () => getIPRange('abc');
       expect(fn).toThrow();
@@ -73,26 +63,6 @@ describe('for two IP addresses', () => {
 
   it('should return an error if one of the IP addresses is in CIDR notation', () => {
     const fn = () => getIPRange('10.1.128.0', '10.1.128.0/29');
-    expect(fn).toThrow();
-  });
-
-  it('should return an error if one of the IP addresses is in null', () => {
-    const fn = () => getIPRange(null, '10.1.128.0');
-    expect(fn).toThrow();
-  });
-
-  it('should return an error if one of the IP addresses is in null', () => {
-    const fn = () => getIPRange('10.1.128.0', null);
-    expect(fn).toThrow();
-  });
-
-  it('should return an error if one of the IP addresses is in undefined', () => {
-    const fn = () => getIPRange(undefined, '10.1.128.0');
-    expect(fn).toThrow();
-  });
-
-  it('should return an error if one of the IP addresses is in undefined', () => {
-    const fn = () => getIPRange('10.1.128.0', undefined);
     expect(fn).toThrow();
   });
 
