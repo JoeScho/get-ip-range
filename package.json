@@ -7,8 +7,7 @@
   "scripts": {
     "test": "jest --coverage",
     "build": "tsc",
-    "prepare" : "npm run build"
-
+    "prepare": "npm run build"
   },
   "files": [
     "index.ts"
