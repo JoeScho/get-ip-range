@@ -1,3 +1,8 @@
+## v3.0.0
+- Refactor to TypeScript
+- New error messages introduced
+- Export { `getIPRange` }
+
 ## v2.1.1
 - Fix error message
 

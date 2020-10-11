@@ -1,23 +1,17 @@
 {
   "name": "get-ip-range",
-  "version": "2.1.1",
+  "version": "3.0.0",
   "description": "Simple utility to convert either CIDR notation or two IP addresses to an array of the range of IP addresses",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha *.test.js",
-    "jshint": "jshint *.js *.test.js",
-    "code-style": "jscs -p airbnb --fix *.js *.test.js",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "check-coverage": "nyc check-coverage --statements 100 --functions 100 --lines 100 --branches 100",
-    "open-coverage": "open coverage/index.html"
+    "test": "jest --coverage",
+    "build": "tsc",
+    "prepare" : "npm run build"
+
   },
   "files": [
-    "LICENSE",
-    "README.md",
-    "index.js"
+    "index.ts"
   ],
   "keywords": [
     "CIDR",
@@ -34,35 +28,17 @@
     "url": "git+https://github.com/JoeScho/get-ip-range.git"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
+    "@types/ip": "^1.1.0",
     "coveralls": "^3.0.2",
-    "jscs": "^3.0.7",
-    "jshint": "^2.10.1",
-    "mocha": "^5.2.0",
-    "nyc": "^14.1.1"
+    "jest": "^26.5.3",
+    "pre-commit": "^1.2.2",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
   },
   "pre-commit": [
-    "jshint",
-    "code-style",
-    "test",
-    "check-coverage"
+    "test"
   ],
-  "jshintConfig": {
-    "boss": true,
-    "node": true,
-    "strict": false,
-    "smarttabs": true,
-    "maxlen": 100,
-    "newcap": false,
-    "undef": true,
-    "unused": true,
-    "onecase": true,
-    "indent": 2,
-    "sub": true,
-    "esversion": 8
-  },
   "dependencies": {
-    "cidr-regex": "^1.0.7",
     "ip": "^1.1.5",
     "ip-address": "^6.1.0"
   }
