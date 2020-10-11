@@ -1,3 +1,7 @@
+## v3.0.0
+- Refactor to TypeScript
+- No implementation change, but new error messages introduced - hence major version bump
+
 ## v2.1.1
 - Fix error message
 
