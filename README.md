@@ -73,3 +73,13 @@ const twoIPv6 = getIPRange('::ffff:102:304', '::ffff:102:307');
 If the supplied IP address(es) are invalid, the request will **throw an [error](https://nodejs.org/api/errors.html#errors_class_error)**. Please handle errors appropriately.
 
 ----
+
+## Contributors
+[//]: contributor-faces
+
+<a href="https://github.com/JoeScho"><img src="https://avatars1.githubusercontent.com/u/12475501?s=460&u=ea1487bb0b85777ae539a986d4254d6964d1c9d7&v=4" title="JoeScho" width="80" height="80"></a>
+<a href="https://github.com/Miosame"><img src="https://avatars3.githubusercontent.com/u/8201077?s=400&u=9ad891c29b7e6468cb842d6bea320c2eaeefc9d3&v=4" title="Miosame" width="80" height="80"></a>
+<a href="https://github.com/JGAntunes"><img src="https://avatars2.githubusercontent.com/u/5799039?s=400&v=4" title="JGAntunes" width="80" height="80"></a>
+<a href="https://github.com/ch-t"><img src="https://avatars0.githubusercontent.com/u/26768691?s=400&u=cf1f62f2ad1ae4d829d6d0cfff9f2b8356730bfd&v=4" title="ch-t" width="80" height="80"></a>
+
+[//]: contributor-faces
