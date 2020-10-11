@@ -55,14 +55,14 @@ const getIPRange = (ip1: string, ip2?: string) => {
   //
   if (ip2) {
     // IPv4
-    const ip2v4 = getIPv4(ip1);
-    if (ip1v4 && ip2v4) {
+    const ip2v4 = getIPv4(ip2);
+    if (ip1v4.valid && ip2v4.valid && !ip1v4.parsedSubnet && !ip2v4.parsedSubnet) {
       return getRangev4(ip1v4.correctForm(), ip2v4.correctForm());
     }
 
     // IPv6
     const ip2v6 = getIPv6(ip2);
-    if (ip1v6 && ip2v6) {
+    if (ip1v6.valid && ip2v6.valid && !ip1v6.parsedSubnet && !ip2v6.parsedSubnet) {
       return getRangev6(ip1v6.correctForm(), ip2v6.correctForm());
     }
 
