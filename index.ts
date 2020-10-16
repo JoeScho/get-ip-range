@@ -33,12 +33,11 @@ const getRangev4 = (ip1: string, ip2: string) => {
 const getRangev6 = (ip1: string, ip2: string) => {
   const ips = [];
 
-  const firstAddress = new Address6(ip1);
-  const lastAddress = new Address6(ip2);
+  const firstAddress = new Address6(ip1).bigInteger();
+  const lastAddress = new Address6(ip2).bigInteger();
 
-  for (let i = firstAddress.bigInteger(); i <= lastAddress.bigInteger(); i++) {
-    ips.push(Address6.fromBigInteger(i).correctForm());
-  }
+  for (let count = 0; firstAddress <= lastAddress; count++)
+    ips.push(Address6.fromBigInteger(firstAddress + count).correctForm());
 
   return ips;
 };
