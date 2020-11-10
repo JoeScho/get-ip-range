@@ -6,7 +6,7 @@ Simple utility to convert either CIDR notation, a hyphenated IP range, or two IP
 
 <a href="https://nodei.co/npm/get-ip-range/"><img src="https://nodei.co/npm/get-ip-range.png?downloads=true"></a>
 
-![Build Status](https://travis-ci.org/JoeScho/get-ip-range.svg?branch=master)[![Coverage Status](https://coveralls.io/repos/github/JoeScho/getIPRange/badge.svg?branch=master)](https://coveralls.io/github/JoeScho/getIPRange?branch=master)[![ISC License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)](https://github.com/JoeScho/getIPRange/blob/master/LICENSE)
+![Build Status](https://travis-ci.org/JoeScho/get-ip-range.svg?branch=main)[![Coverage Status](https://coveralls.io/repos/github/JoeScho/getIPRange/badge.svg?branch=main)](https://coveralls.io/github/JoeScho/getIPRange?branch=main)[![ISC License](https://img.shields.io/badge/license-ISC-blue.svg?style=flat-square)](https://github.com/JoeScho/getIPRange/blob/main/LICENSE)
 
 ----
 

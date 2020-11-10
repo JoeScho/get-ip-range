@@ -3,7 +3,7 @@ node_js:
   - 12
 branches:
   only:
-    - master
+    - main
 notifications:
   email:
     - joeschofield@live.co.uk
