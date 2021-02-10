@@ -28,8 +28,7 @@
   },
   "devDependencies": {
     "@types/ip": "^1.1.0",
-    "contributor-faces": "^1.1.0",
-    "coveralls": "^3.0.2",
+    "contributor-faces": "^0.1.1",
     "jest": "^26.5.3",
     "pre-commit": "^1.2.2",
     "ts-jest": "^26.4.1",
