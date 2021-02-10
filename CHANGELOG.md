@@ -1,3 +1,6 @@
+## v4.0.0
+- Set default limit of 10000 IPs in range to avoid out of memory exception (can be overridden with `MAX_RANGE` environment variable)
+
 ## v3.0.0
 - Refactor to TypeScript
 - New error messages introduced

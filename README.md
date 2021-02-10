@@ -70,7 +70,8 @@ const twoIPv6 = getIPRange('::ffff:102:304', '::ffff:102:307');
 
 **Errors**
 
-If the supplied IP address(es) are invalid, the request will **throw an [error](https://nodejs.org/api/errors.html#errors_class_error)**. Please handle errors appropriately.
+* If the supplied IP address(es) are invalid, the request will **throw an [error](https://nodejs.org/api/errors.html#errors_class_error)**. Please handle errors appropriately.
+* If there are more than the default maximum range (10000) or the environment variable (MAX_RANGE) IPs in the range, it will throw an error.
 
 ----
 
