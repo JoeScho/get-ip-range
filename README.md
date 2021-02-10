@@ -82,5 +82,6 @@ const twoIPv6 = getIPRange('::ffff:102:304', '::ffff:102:307');
 <a href="https://github.com/Miosame"><img src="https://avatars3.githubusercontent.com/u/8201077?s=400&u=9ad891c29b7e6468cb842d6bea320c2eaeefc9d3&v=4" title="Miosame" width="80" height="80"></a>
 <a href="https://github.com/JGAntunes"><img src="https://avatars2.githubusercontent.com/u/5799039?s=400&v=4" title="JGAntunes" width="80" height="80"></a>
 <a href="https://github.com/ch-t"><img src="https://avatars0.githubusercontent.com/u/26768691?s=400&u=cf1f62f2ad1ae4d829d6d0cfff9f2b8356730bfd&v=4" title="ch-t" width="80" height="80"></a>
+<a href="https://github.com/yaniv-checkmarx"><img src="https://avatars.githubusercontent.com/u/59412524?s=400&u=320f70f64c191c52aead4bdbb9245d65d1353a17&v=4" title="yaniv-checkmarx" width="80" height="80"></a>
 
 [//]: contributor-faces
