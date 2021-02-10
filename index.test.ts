@@ -103,4 +103,11 @@ describe('for two IP addresses', () => {
     const throwFn = () => getIPRange('128.0.0.0/1');
     expect(throwFn).toThrow('Too many IPs in range. Total number: 2147483647. Max count is 5000, to increase, set the limit with the MAX_RANGE environment variable');
   });
+
+  it('should throw if process.env.MAX_RANGE is NaN', () => {
+    process.env.MAX_RANGE = 'foo';
+
+    const throwFn = () => getIPRange('128.0.0.0/1');
+    expect(throwFn).toThrow('MAX_RANGE must be an integer');
+  });
 });

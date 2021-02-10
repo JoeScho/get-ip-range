@@ -58,6 +58,9 @@ const isCIDR = (ipCIDR: Address4 | Address6): boolean => Boolean(ipCIDR.parsedSu
 const isRange = (ipRange: string): boolean => ipRange.indexOf('-') !== -1;
 
 const getIPRange = (ip1: string, ip2?: string): Array<string> => {
+  if (process.env.MAX_RANGE && isNaN(parseInt(process.env.MAX_RANGE))) {
+    throw new Error('MAX_RANGE must be an integer');
+  }
   maxRange = parseInt(process.env.MAX_RANGE || '10000');
 
   const ip1v4 = getIPv4(ip1);
