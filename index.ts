@@ -2,6 +2,9 @@ import { toLong, fromLong } from 'ip';
 // @ts-ignore
 import { Address4, Address6 } from 'ip-address';
 
+// Set default max range
+let maxRange = 10000;
+
 const getIPv4 = (ip: string): Address4 | null => {
   try {
     return new Address4(ip);
@@ -23,6 +26,13 @@ const getRangev4 = (ip1: string, ip2: string) => {
 
   let firstAddressLong = toLong(ip1);
   const lastAddressLong = toLong(ip2);
+
+  const totalIPs = lastAddressLong - firstAddressLong;
+
+  // Prevent DoS
+  if (totalIPs > maxRange) {
+    throw new Error(`Too many IPs in range. Total number: ${totalIPs}. Max count is ${maxRange}, to increase, set the limit with the MAX_RANGE environment variable`)
+  }
 
   for (firstAddressLong; firstAddressLong <= lastAddressLong; firstAddressLong++)
     ips.push(fromLong(firstAddressLong));
@@ -48,6 +58,8 @@ const isCIDR = (ipCIDR: Address4 | Address6): boolean => Boolean(ipCIDR.parsedSu
 const isRange = (ipRange: string): boolean => ipRange.indexOf('-') !== -1;
 
 const getIPRange = (ip1: string, ip2?: string): Array<string> => {
+  maxRange = parseInt(process.env.MAX_RANGE || '10000');
+
   const ip1v4 = getIPv4(ip1);
   const ip1v6 = getIPv6(ip1);
 

@@ -91,4 +91,16 @@ describe('for two IP addresses', () => {
   it('should support hyphenated range in IPv5', () => {
     expect(getIPRange('::ffff:102:304-::ffff:102:307')).toEqual(successResponsev6);
   });
+
+  it('should throw if the range is greater than 10000 default', () => {
+    const throwFn = () => getIPRange('128.0.0.0/1');
+    expect(throwFn).toThrow('Too many IPs in range. Total number: 2147483647. Max count is 10000, to increase, set the limit with the MAX_RANGE environment variable');
+  });
+
+  it('should throw if the range is greater than process.env.MAX_RANGE', () => {
+    process.env.MAX_RANGE = '5000';
+
+    const throwFn = () => getIPRange('128.0.0.0/1');
+    expect(throwFn).toThrow('Too many IPs in range. Total number: 2147483647. Max count is 5000, to increase, set the limit with the MAX_RANGE environment variable');
+  });
 });
