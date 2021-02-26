@@ -1,6 +1,6 @@
 # get-ip-range
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Simple utility to convert either CIDR notation, a hyphenated IP range, or two IP addresses to an array of the range of IP addresses.
@@ -79,14 +79,13 @@ const twoIPv6 = getIPRange('::ffff:102:304', '::ffff:102:307');
 ----
 
 ## Contributors
-[//]: contributor-faces
-
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
   <tr>
     <td align="center"><a href="https://github.com/JoeScho"><img src="https://avatars.githubusercontent.com/u/12475501?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joe Schofield</b></sub></a><br /><a href="https://github.com/JoeScho/get-ip-range/commits?author=JoeScho" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Miosame"><img src="https://avatars.githubusercontent.com/u/8201077?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Miosame</b></sub></a><br /><a href="https://github.com/JoeScho/get-ip-range/commits?author=Miosame" title="Code">💻</a></td>
   </tr>
 </table>
 
@@ -94,6 +93,11 @@ const twoIPv6 = getIPRange('::ffff:102:304', '::ffff:102:307');
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
+
+
+
+
+
 <a href="https://github.com/JoeScho"><img src="https://avatars1.githubusercontent.com/u/12475501?s=460&u=ea1487bb0b85777ae539a986d4254d6964d1c9d7&v=4" title="JoeScho" width="80" height="80"></a>
 <a href="https://github.com/Miosame"><img src="https://avatars3.githubusercontent.com/u/8201077?s=400&u=9ad891c29b7e6468cb842d6bea320c2eaeefc9d3&v=4" title="Miosame" width="80" height="80"></a>
 <a href="https://github.com/JGAntunes"><img src="https://avatars2.githubusercontent.com/u/5799039?s=400&v=4" title="JGAntunes" width="80" height="80"></a>
