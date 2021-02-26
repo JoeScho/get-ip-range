@@ -1,0 +1,24 @@
+{
+  "projectName": "get-ip-range",
+  "projectOwner": "JoeScho",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "JoeScho",
+      "name": "Joe Schofield",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12475501?v=4",
+      "profile": "https://github.com/JoeScho",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}
