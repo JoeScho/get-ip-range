@@ -1,6 +1,6 @@
 # get-ip-range
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Simple utility to convert either CIDR notation, a hyphenated IP range, or two IP addresses to an array of the range of IP addresses.
@@ -86,6 +86,7 @@ const twoIPv6 = getIPRange('::ffff:102:304', '::ffff:102:307');
   <tr>
     <td align="center"><a href="https://github.com/JoeScho"><img src="https://avatars.githubusercontent.com/u/12475501?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Joe Schofield</b></sub></a><br /><a href="https://github.com/JoeScho/get-ip-range/commits?author=JoeScho" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Miosame"><img src="https://avatars.githubusercontent.com/u/8201077?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Miosame</b></sub></a><br /><a href="https://github.com/JoeScho/get-ip-range/commits?author=Miosame" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/JGAntunes"><img src="https://avatars.githubusercontent.com/u/5799039?v=4?s=100" width="100px;" alt=""/><br /><sub><b>João Antunes</b></sub></a><br /><a href="https://github.com/JoeScho/get-ip-range/commits?author=JGAntunes" title="Code">💻</a></td>
   </tr>
 </table>
 
