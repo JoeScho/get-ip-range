@@ -45,6 +45,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "yaniv-checkmarx",
+      "name": "yaniv-checkmarx",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59412524?v=4",
+      "profile": "https://github.com/yaniv-checkmarx",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
