@@ -21,8 +21,8 @@ const getIPv6 = (ip: string): Address6 | null => {
   }
 };
 
-const getRangev4 = (ip1: string, ip2: string) => {
-  const ips = [];
+const getRangev4 = (ip1: string, ip2: string): string[] => {
+  const ips: string[] = [];
 
   let firstAddressLong = toLong(ip1);
   const lastAddressLong = toLong(ip2);
@@ -40,8 +40,8 @@ const getRangev4 = (ip1: string, ip2: string) => {
   return ips;
 };
 
-const getRangev6 = (ip1: string, ip2: string) => {
-  const ips = [];
+const getRangev6 = (ip1: string, ip2: string): string[] => {
+  const ips: string[] = [];
 
   const firstAddress = new Address6(ip1);
   const lastAddress = new Address6(ip2);
