@@ -40,7 +40,7 @@
     "lint"
   ],
   "dependencies": {
-    "ip": "^1.1.5",
+    "ip": "^1.1.9",
     "ip-address": "^6.1.0"
   }
 }
